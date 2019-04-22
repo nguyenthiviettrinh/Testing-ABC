@@ -13,25 +13,17 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-Date today = new Date()
-
-String todaysDate = today.format('MMddyy-hhmm')
-
-String engagementName = 'auto_eng' + todaysDate
-
 WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://172.16.1.170:3461/home')
 
-WebUI.setText(findTestObject('User Authentication/Sign up - Frontpage/input_Full name_Frontpage'), 'Full Name')
+WebUI.click(findTestObject('User Authentication/Sign in - Dialog/a_Sign in'))
 
-WebUI.setText(findTestObject('User Authentication/Sign up - Frontpage/input_Email_Frontpage'), engagementName + '@mailitor.com')
+WebUI.setText(findTestObject('User Authentication/Sign in - Dialog/input_Email'), 'nhien@gmail.com')
 
-WebUI.setEncryptedText(findTestObject('User Authentication/Sign up - Frontpage/input_Password_Frontpage'), 'RigbBhfdqOBGNlJIWM1ClA==')
+WebUI.setEncryptedText(findTestObject('User Authentication/Sign in - Dialog/input_Password'), 'RigbBhfdqOBGNlJIWM1ClA==')
 
-WebUI.setEncryptedText(findTestObject('User Authentication/Sign up - Frontpage/input_Confirm Password_Frontpage'), 'RigbBhfdqOBGNlJIWM1ClA==')
+WebUI.click(findTestObject('User Authentication/Sign in - Dialog/button_Sign in'))
 
-WebUI.click(findTestObject('User Authentication/Sign up - Frontpage/checkbox_Sign Up_Frontpage'))
-
-WebUI.click(findTestObject('Object Repository/User Authentication/Sign up - Frontpage/button_Sign Up'))
+WebUI.closeBrowser()
 

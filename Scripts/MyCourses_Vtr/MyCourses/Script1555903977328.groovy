@@ -28,3 +28,6 @@ WebUI.navigateToUrl('http://demoaut.katalon.com/')
 
 'Close browser'
 WebUI.closeBrowser()
+
+WebUI.delay(2)
+

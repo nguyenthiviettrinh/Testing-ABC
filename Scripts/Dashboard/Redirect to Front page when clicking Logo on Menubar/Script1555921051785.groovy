@@ -13,15 +13,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('User Authentication/Sign in - Dialog/Able to Sign in in Dialog'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('http://172.16.1.170:3461/home')
+WebUI.delay(2)
 
-WebUI.click(findTestObject('User Authentication/Sign in - Dialog/a_Sign in'))
-
-WebUI.setText(findTestObject('User Authentication/Sign in - Dialog/input_Email'), 'nhien@gmail.com')
-
-WebUI.setEncryptedText(findTestObject('User Authentication/Sign in - Dialog/input_Password'), 'RigbBhfdqOBGNlJIWM1ClA==')
-
-WebUI.click(findTestObject('User Authentication/Sign in - Dialog/button_Sign in'))
+WebUI.click(findTestObject('Dashboard/logo'))
 

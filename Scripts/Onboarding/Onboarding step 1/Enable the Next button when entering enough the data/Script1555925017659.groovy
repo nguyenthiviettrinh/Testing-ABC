@@ -13,15 +13,17 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('')
+WebUI.callTestCase(findTestCase('User Authentication/Sign up - Frontpage/Able to Sign up in Frontpage'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl('http://172.16.1.170:3461/home')
+WebUI.click(findTestObject('Onboarding/div_DropdownlistCityProvince'))
 
-WebUI.click(findTestObject('User Authentication/Sign in - Dialog/a_Sign in'))
+WebUI.click(findTestObject('Object Repository/Onboarding/span_Ho Chi Minh'))
 
-WebUI.setText(findTestObject('User Authentication/Sign in - Dialog/input_Email'), 'nhien@gmail.com')
+WebUI.click(findTestObject('Onboarding/i_High school'))
 
-WebUI.setEncryptedText(findTestObject('User Authentication/Sign in - Dialog/input_Password'), 'RigbBhfdqOBGNlJIWM1ClA==')
+WebUI.click(findTestObject('Onboarding/div_DropdownlistSchool'))
 
-WebUI.click(findTestObject('User Authentication/Sign in - Dialog/button_Sign in'))
+WebUI.click(findTestObject('Object Repository/Onboarding/span_Tran Quoc Thao High School'))
+
+WebUI.click(findTestObject('Object Repository/Onboarding/button_Next'))
 

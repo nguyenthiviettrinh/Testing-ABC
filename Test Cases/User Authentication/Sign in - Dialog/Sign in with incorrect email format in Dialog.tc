@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Sign in with incorrect email format in Dialog</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c756eb00-0f7a-416d-abf8-566dc808c22a</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Sign in with account that have not to exits</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dbddb383-faff-451f-a4a5-6943cd6f9bfd</testCaseGuid>
+</TestCaseEntity>
